@@ -5,7 +5,7 @@
 The code is built on [visionml/pytracking](https://github.com/visionml/pytracking)  and tested on Ubuntu 18.04 environment with RTX 3090 GPUs.
 
 ##  Our Method 
-1. ``` cd FENetpp ```
+1. ``` cd fenetpp ```
 
 2. Download our proposed [dataset](https://zhangjiqing.com/dataset/)
 
