@@ -5,14 +5,16 @@
 The code is built on [visionml/pytracking](https://github.com/visionml/pytracking)  and tested on Ubuntu 18.04 environment with RTX 3090 GPUs.
 
 ##  Our Method 
-1. Download our preprocessed [test dataset](https://drive.google.com/drive/folders/1pNY8kahrof9l9zCw7TtXY4RhvJ4GGx37?usp=sharing) of FE240hz. (The whole FE240hz dataset can be downloaded [here](https://zhangjiqing.com/publication/iccv21_fe108_tracking/)).
+1. ``` cd FENetpp ```
 
-2. Download the [pretrained model](https://drive.google.com/file/d/1xD-d24TRoMHRAQKIxE7CxMhI2UffSiUG/view?usp=sharing) and put it into ./snapshots/stnet.
+2. Download our proposed [dataset](https://zhangjiqing.com/dataset/)
 
-3. Change dataset path at line 32 in videoanalyst/engine/tester/tester_impl/eventdata.py. ```data_root="/your_data_path/img_120_split"```
+3. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xohzbdrUqGgZasRwTi), and put it into ``` ./pytracking/networks ```
 
-4. run ``` python main/test.py --config experiments/test/fe240/fe240.yaml ``` the predicted bounding boxes are saved in logs/EVENT-Benchmark/. 
-    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height] in one event frame.
+4. Change your own path in ``` ./pytracking/evaluation/local.py ```
+
+5. run ``` python run_tracker.py dimp prdimp18 --dataset eotb --sequence val --epochname fenetpp.pth.tar ```, the predicted bbox will be saved in ``` ./pytracking/tracking_results ```. Using jupyter in ```notebooks``` to see the SR and PR scores.
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
 
 ##  Extended [TransT](https://github.com/chenxin-dlut/TransT) with Our Modules
 1. ``` cd TransT-fusion ```
@@ -22,7 +24,7 @@ The code is built on [visionml/pytracking](https://github.com/visionml/pytrackin
 3. Change dataset and model path from line 8 to line 13 in pytracking/evaluation/local.py 
 
 4. ``` cd pytracking ``` and run ``` python run_tracker.py transt transt50 --dataset eotb --sequence val  --epochname  TransT_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
-    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height] in one event frame.
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
 
 Please cite TransT if you find the work useful:
 ```
@@ -45,7 +47,7 @@ year={2021}
 4. Change project path and data path from line 13 to line 15 in ./lib/test/evaluation/enviorment.py 
 
 4. ``` cd ./tracking ``` and run ``` python test.py stark_s baseline --dataset eotb --sequence val --epochname STARKS_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
-    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height] in one event frame.
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
 
 Please cite Stark if you find the work useful:
 ```
