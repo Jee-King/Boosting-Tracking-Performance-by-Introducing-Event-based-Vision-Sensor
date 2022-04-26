@@ -60,4 +60,5 @@ Please cite Stark if you find the work useful:
 ****
 
 ##  Acknowledgement
+We would like to thank [PyTracking](https://github.com/visionml/pytracking),  [TransT](https://github.com/chenxin-dlut/TransT) and [Stark](https://github.com/researchmm/Stark) for providing great frameworks and toolkits.
 
