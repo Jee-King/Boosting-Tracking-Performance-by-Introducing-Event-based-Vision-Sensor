@@ -46,7 +46,7 @@ year={2021}
 
 4. Change project path and data path from line 13 to line 15 in ./lib/test/evaluation/enviorment.py 
 
-4. ``` cd ./tracking ``` and run ``` python test.py stark_s baseline --dataset eotb --sequence val --epochname STARKS_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
+5. ``` cd ./tracking ``` and run ``` python test.py stark_s baseline --dataset eotb --sequence val --epochname STARKS_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
     - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
 
 Please cite Stark if you find the work useful:
@@ -60,6 +60,51 @@ Please cite Stark if you find the work useful:
 }
 ```
 ****
+
+##  Extended [ATOM](https://github.com/visionml/pytracking) with Our Modules
+1. ``` cd atom-fusion ```
+
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUoiI8aAdnhmVDDf) and put it into $your_path$.
+
+3. Change model path and other settings from line 9 to line 20 in ./lib/test/evaluation/local.py 
+
+4. ``` cd ./tracking ``` and run ``` python run_tracker.py atom default --dataset eotb --sequence val --epochname ATOMnet_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
+
+Please cite ATOM if you find the work useful:
+```
+@inproceedings{danelljan2019atom,
+  title={Atom: Accurate tracking by overlap maximization},
+  author={Danelljan, Martin and Bhat, Goutam and Khan, Fahad Shahbaz and Felsberg, Michael},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4660--4669},
+  year={2019}
+}
+```
+****
+
+##  Extended [DiMP](https://github.com/visionml/pytracking) with Our Modules
+1. ``` cd dimp-fusion ```
+
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into $your_path$.
+
+3. Change model path and other settings from line 9 to line 20 in ./lib/test/evaluation/local.py 
+
+4. ``` cd ./tracking ``` and run ``` python run_tracker.py dimp dimp50 --dataset eotb --sequence val --epochname DIMPnet_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
+
+Please cite DiMP if you find the work useful:
+```
+@inproceedings{bhat2019learning,
+  title={Learning discriminative model prediction for tracking},
+  author={Bhat, Goutam and Danelljan, Martin and Gool, Luc Van and Timofte, Radu},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={6182--6191},
+  year={2019}
+}
+```
+****
+
 
 ##  Acknowledgement
 We would like to thank [PyTracking](https://github.com/visionml/pytracking),  [TransT](https://github.com/chenxin-dlut/TransT) and [Stark](https://github.com/researchmm/Stark) for providing great frameworks and toolkits.
