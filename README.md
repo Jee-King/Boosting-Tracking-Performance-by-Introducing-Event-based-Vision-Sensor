@@ -1,8 +1,8 @@
 # FENetpp
 
-##  Example Code Evaluation 
+<!-- ##  Example Code Evaluation 
  
-The code is built on [visionml/pytracking](https://github.com/visionml/pytracking)  and tested on Ubuntu 18.04 environment with RTX 3090 GPUs.
+The code is built on [visionml/pytracking](https://github.com/visionml/pytracking)  and tested on Ubuntu 18.04 environment with RTX 3090 GPUs. -->
 
 ## Download DATASET
 Download our proposed [dataset](https://zhangjiqing.com/dataset/)
