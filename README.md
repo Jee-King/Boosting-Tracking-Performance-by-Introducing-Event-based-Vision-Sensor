@@ -64,7 +64,7 @@ Please cite Stark if you find the work useful:
 ##  Extended [ATOM](https://github.com/visionml/pytracking) with Our Modules
 1. ``` cd atom-fusion ```
 
-2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUoiI8aAdnhmVDDf) and put it into $your_path$.
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUoiI8aAdnhmVDDf) and put it into $YOUR_PATH.
 
 3. Change model path and other settings from line 9 to line 20 in ./lib/test/evaluation/local.py 
 
@@ -86,7 +86,7 @@ Please cite ATOM if you find the work useful:
 ##  Extended [DiMP](https://github.com/visionml/pytracking) with Our Modules
 1. ``` cd dimp-fusion ```
 
-2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into $your_path$.
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into $YOUR_PATH.
 
 3. Change model path and other settings from line 9 to line 20 in ./lib/test/evaluation/local.py 
 
