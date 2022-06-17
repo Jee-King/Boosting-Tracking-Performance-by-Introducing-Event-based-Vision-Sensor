@@ -12,9 +12,7 @@ def local_env_settings():
     settings.got_packed_results_path = ''
     settings.got_reports_path = ''
     settings.lasot_path = ''
-    # settings.network_path = '/home/iccd/Documents/pytracking-fusion/ltr/checkpoints/ltr/dimp/dimp50/'    # Where tracking networks are stored.
-    # settings.network_path = '/home/iccd/Documents/pytracking-fusion/ltr/checkpoints/ltr/kys/kys/'    # Where tracking networks are stored.
-    settings.network_path = '/home/iccd/data/kys-fusion/checkpoints/ltr/kys/kys/'    # Where tracking networks are stored.
+    settings.network_path = '/home/iccd/Documents/pytracking-fusion/ltr/checkpoints/ltr/dimp/dimp50/'    # Where tracking networks are stored.
     settings.nfs_path = ''
     settings.otb_path = ''
     settings.result_plot_path = '/home/iccd/Documents/pytracking-fusion/pytracking/result_plots/'
