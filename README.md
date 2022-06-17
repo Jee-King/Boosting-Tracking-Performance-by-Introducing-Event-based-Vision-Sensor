@@ -4,17 +4,10 @@
  
 The code is built on [visionml/pytracking](https://github.com/visionml/pytracking)  and tested on Ubuntu 18.04 environment with RTX 3090 GPUs.
 
-##  Our Method 
-1. ``` cd fenetpp ```
+## Download DATASET
+Download our proposed [dataset](https://zhangjiqing.com/dataset/)
 
-2. Download our proposed [dataset](https://zhangjiqing.com/dataset/)
 
-3. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xohzbdrUqGgZasRwTi), and put it into ``` ./pytracking/networks ```
-
-4. Change your own path in ``` ./pytracking/evaluation/local.py ```
-
-5. run ``` python run_tracker.py dimp prdimp18 --dataset eotb --sequence val --epochname fenetpp.pth.tar ```, the predicted bbox will be saved in ``` ./pytracking/tracking_results ```. Using jupyter in ```notebooks``` to see the SR and PR scores.
-    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
 
 ##  Extended [TransT](https://github.com/chenxin-dlut/TransT) with Our Modules
 1. ``` cd TransT-fusion ```
@@ -57,6 +50,28 @@ Please cite Stark if you find the work useful:
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
   pages={10448--10457},
   year={2021}
+}
+```
+****
+
+##  Extended [PrDiMP](https://github.com/visionml/pytracking) with Our Modules
+1. ``` cd fenetpp ```
+
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xohzbdrUqGgZasRwTi), and put it into ``` ./pytracking/networks ```
+
+3. Change your own path in ``` ./pytracking/evaluation/local.py ```
+
+4. run ``` python run_tracker.py dimp prdimp18 --dataset eotb --sequence val --epochname fenetpp.pth.tar ```, the predicted bbox will be saved in ``` ./pytracking/tracking_results ```. Using jupyter in ```notebooks``` to see the SR and PR scores.
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
+
+Please cite PrDiMP if you find the work useful:
+```
+@inproceedings{danelljan2020probabilistic,
+  title={Probabilistic regression for visual tracking},
+  author={Danelljan, Martin and Gool, Luc Van and Timofte, Radu},
+  booktitle={Proceedings of the IEEE/CVF conference on computer vision and pattern recognition},
+  pages={7183--7192},
+  year={2020}
 }
 ```
 ****
