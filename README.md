@@ -119,7 +119,49 @@ Please cite DiMP if you find the work useful:
 }
 ```
 ****
+##  Extended [SparseTT](https://github.com/fzh0917/SparseTT) with Our Modules
+1. ``` cd SparseTT-fusion ```
 
+2. Download the [pretrained model](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth)(Swin backbone) and put it into models/swin/
+
+3. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into work_dir/train/sparsett-swin-got10k-train/.
+
+4. Change model path and other settings in experiments/sparsett/test/got10k/sparsett_swin_got10k.yaml line 12 and line 68-74.
+
+5. run ``` python main/test.py --config experiments/sparsett/test/got10k/sparsett_swin_got10k.yaml``` the predicted bounding boxes are be saved in work_dir/test/sparsett-swin-got10k-test/result/.  
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
+
+Please cite SparseTT if you find the work useful:
+```
+@article{fu2022sparsett,
+  title={SparseTT: Visual Tracking with Sparse Transformers},
+  author={Fu, Zhihong and Fu, Zehua and Liu, Qingjie and Cai, Wenrui and Wang, Yunhong},
+  booktitle={IJCAI},
+  year={2022}
+}
+```
+****
+##  Extended [SiamFC++](https://github.com/megvii-research/video_analyst) with Our Modules
+1. ``` cd siamfcpp-fusion ```
+
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into snapshots/siamfcpp_alexnet-got/.
+
+3. Change model path and other settings in experiments/siamfcpp/train/got10k/siamfcpp_alexnet-trn.yaml line 23 and line 31-38.
+
+4. run ``` python main/test.py --config experiments/siamfcpp/train/got10k/siamfcpp_alexnet-trn.yaml``` the predicted bounding boxes are be saved in logs/GOT-Benchmark/result/GOT-10k/siamfcpp_alexnet-got/result/.  
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
+
+Please cite SiamFC++ if you find the work useful:
+```
+@inproceedings{xu2020siamfc++,
+  title={SiamFC++: Towards Robust and Accurate Visual Tracking with Target Estimation Guidelines.},
+  author={Xu, Yinda and Wang, Zeyu and Li, Zuoxin and Yuan, Ye and Yu, Gang},
+  booktitle={AAAI},
+  pages={12549--12556},
+  year={2020}
+}
+```
+****
 
 ##  Acknowledgement
 We would like to thank [PyTracking](https://github.com/visionml/pytracking),  [TransT](https://github.com/chenxin-dlut/TransT) and [Stark](https://github.com/researchmm/Stark) for providing great frameworks and toolkits.
