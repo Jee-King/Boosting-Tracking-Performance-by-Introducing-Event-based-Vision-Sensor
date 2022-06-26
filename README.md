@@ -119,7 +119,27 @@ Please cite DiMP if you find the work useful:
 }
 ```
 ****
+##  Extended [SparseTT](https://github.com/fzh0917/SparseTT) with Our Modules
+1. ``` cd SparseTT-fusion ```
 
+2. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into $YOUR_PATH.
+
+3. Change model path and other settings from line 9 to line 20 in ./lib/test/evaluation/local.py 
+
+4. ``` cd ./tracking ``` and run ``` python run_tracker.py dimp dimp50 --dataset eotb --sequence val --epochname DIMPnet_extended.pth.tar``` the predicted bounding boxes are be saved in pytracking/trakcing_results/.  
+    - The predicted  bounding box format:  An N×4 matrix with each line representing object location [xmin, ymin, width, height].
+
+Please cite DiMP if you find the work useful:
+```
+@inproceedings{bhat2019learning,
+  title={Learning discriminative model prediction for tracking},
+  author={Bhat, Goutam and Danelljan, Martin and Gool, Luc Van and Timofte, Radu},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={6182--6191},
+  year={2019}
+}
+```
+****
 
 ##  Acknowledgement
 We would like to thank [PyTracking](https://github.com/visionml/pytracking),  [TransT](https://github.com/chenxin-dlut/TransT) and [Stark](https://github.com/researchmm/Stark) for providing great frameworks and toolkits.
