@@ -123,7 +123,7 @@ Please cite Stark if you find the work useful:
 
 2. Download the [pretrained model](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth)(Swin backbone) and put it into models/swin/
 
-3. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooUnG-qrOG2v9q33m) and put it into work_dir/train/sparsett-swin-got10k-train/.
+3. Download the [pretrained model](https://1drv.ms/u/s!AoopRFuuZ7xooXPkpqyV-OdCSA-F?e=7RTRSo) and put it into work_dir/train/sparsett-swin-got10k-train/.
 
 4. Change model path and other settings in experiments/sparsett/test/got10k/sparsett_swin_got10k.yaml line 12 and line 68-74.
 
